@@ -1,26 +1,66 @@
 /* header */
 body {
-  width: auto;
-  height: 300px;
-  background-image: url(../images/veneer.jpg);
+  /* width: 100%; */
+  /* height: 300px; */
+  background: url(../images/veneer.jpg);
+  background-size: cover;
+  height: auto;
+
 }
 
 .header {
   width: auto;
   height: 100px;
-  background: gold;
+  /* background: gold; */
 }
 
-.progress {}
+input {
+  outline: none;
+}
 
+input[type=range] {
+  height: 3px;
+  border-radius: 2px;
+  background: #000;
+  /* Hides the slider so that custom slider can be made */
+  width: 20%;
+  /* Specific width is required for Firefox. */
+  /* background: transparent; */
+  /* Otherwise white in Chrome */
+}
 
+input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background: olivedrab;
+  cursor: pointer;
+}
+
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  /* background: #000;
+  border-color: #000; */
+  color: transparent;
+}
+
+.nav {
+  width: auto;
+}
+
+#progress {}
 
 .language {}
 
-
-
 .listening {}
-
-
 
 .list {}

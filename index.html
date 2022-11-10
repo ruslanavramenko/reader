@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <!-- <link rel="stylesheet" href="./js/Sliders.js-master/slider.css" /> -->
+
 
 
   <title>Читалка </title>
@@ -15,15 +17,20 @@
 
 
   <header class="header">
-    <navigation>
-      <div class="progress"></div>
+    <navigationc class="nav">
+
+      <div class="progress">
+        <input type="range" class="reader-progress" name="value1" text="Default slider:" color="#000000" min=0 max=10
+          smooth=yes>
+        <div class="progress-data">0</div>
+      </div>
       <div class="language"></div>
       <div class="listening"></div>
       <div class="list"></div>
-    </navigation>
-    <section>
+      </navigation>
+      <section>
 
-    </section>
+      </section>
   </header>
 
   <section>
@@ -33,10 +40,22 @@
 
 
 
+  <!-- <script src="./js/Sliders.js-master/sliders.js"></script> -->
 
+  <script>
+    const range = document.querySelector('.reader-progress')
+    window.onload = () => {
+      document.querySelector('.progress-data').innerHTML = range.value * 10 + '%'
+    }
+    range.onchange = () => {
+      document.querySelector('.progress-data').innerHTML = range.value * 10 + '%'
+    }
 
-  <script>   </script>
+  </script>
+
   <script src="./js/script.js"></script>
+
+
 </body>
 
 </html>
